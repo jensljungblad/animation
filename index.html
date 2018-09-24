@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      html, body {
+        min-height: 100%;
+        display: flex;
+        background: black;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content {
+        height: 1080px;
+        width: 1920px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .content img {
+        position: absolute;
+        transition: transform 30s linear;
+        cursor: none;
+      }
+
+      /* 400px / 30s = 13,33px/s */
+      .content:hover #layer-1 {
+        /* transform: translate(-400px, 0); */
+        transform: translate(-800px, 0);
+      }
+
+      /* 3800px / 30s = 126,66px/s */
+      .content:hover #layer-2 {
+        /* transform: translate(-3800px, 0); */
+        transform: translate(-7600px, 0);
+      }
+
+      /* 4800px / 30s = 160px/s */
+      .content:hover #layer-3 {
+        /* transform: translate(-4800px, 0); */
+        transform: translate(-9600px, 0);
+      }
+
+      /* 5300px / 30s = 176,66px/s */
+      .content:hover #layer-4 {
+        /* transform: translate(-5300px, 0); */
+        transform: translate(-10600px, 0);
+      }
+
+      /* 7000px / 30s = 233,33px/s */
+      .content:hover #layer-5 {
+        /* transform: translate(-7000px, 0); */
+        transform: translate(-14000px, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <img id="layer-1" src="./layer 1.png" alt="">
+      <img id="layer-2" src="./layer 2.png" alt="">
+      <img id="layer-3" src="./layer 3.png" alt="">
+      <img id="layer-4" src="./layer 4.png" alt="">
+      <img id="layer-5" src="./layer 5.png" alt="">
+    </div>
+  </body>
+</html>
